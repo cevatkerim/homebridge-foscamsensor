@@ -67,7 +67,7 @@ FoscamSensorAccessory.prototype = {
 
 
 	var motionChecker = new MotionUpdater({
-		time: this.time,
+		time: this.interval,
 		ip: this.ip,
 		user: this.user,
 		pwd: this.pwd

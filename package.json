@@ -5,7 +5,7 @@
   "repository": {
     "type": "git",
     "url": "git://github.com/cevatkerim/homebridge-foscamsensor"
-  }
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,7 +16,7 @@
   "engines": {
     "node": ">=0.12.0",
     "homebridge": ">=0.2.5"
-  }
+  },
   "dependencies": {
     "events": "^1.1.0",
     "moment": "^2.13.0",
