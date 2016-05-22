@@ -1,6 +1,6 @@
 {
   "name": "homebridge-foscamsensor",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Detects motion based on logs",
   "keywords": [
     "homebridge-plugin"
