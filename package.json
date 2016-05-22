@@ -2,6 +2,9 @@
   "name": "homebridge-foscamsensor",
   "version": "0.2.0",
   "description": "Detects motion based on logs",
+  "keywords": [
+    "homebridge-plugin"
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/cevatkerim/homebridge-foscamsensor"
