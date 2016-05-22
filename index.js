@@ -25,7 +25,7 @@ function FoscamSensorAccessory(log, config) {
       this.sn = config["sn"];
   } else {
       var shasum = crypto.createHash('sha1');
-      shasum.update(this.path);
+      shasum.update(this.ip);
       this.sn = shasum.digest('base64');
       debug('Computed SN ' + this.sn);
   }
@@ -54,14 +54,12 @@ FoscamSensorAccessory.prototype = {
     };
     
 
-    var motionHandler = function(){
-        var d = new Date();
-        if(d.getTime() - stats.mtime.getTime() <= (this.window_seconds * 1000)){
-            var newState = this.inverse ? false : true;
-            changeAction(newState);
-            if(this.timer !== undefined) clearTimeout(this.timer);
-            this.timer = setTimeout(function(){changeAction(!newState);}, this.window_seconds * 1000);
-        }
+    var motionHandler = function(motion){
+        this.log("Motion Detected")
+        var newState = true;
+        changeAction(newState);
+        if(this.timer !== undefined) clearTimeout(this.timer);
+        this.timer = setTimeout(function(){changeAction(!newState);}, 15000);
     }.bind(this);
 
 
