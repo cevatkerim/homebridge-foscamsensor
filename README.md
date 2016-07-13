@@ -18,6 +18,14 @@ This plugin creates a motion sensor accessory based on reading the log file of t
 | `user` | Username for the camera. |
 | `pwd` | Password for the camera. |
 
+	{
+        "accessory": "homebridge-foscamsensor.FoscamSensor",
+        "name": "Office Den",
+        "ip": "192.168.1.16:8092",
+        "interval": "2000",
+        "user": "admin",
+        "pwd": "password"
+    }
 
 Enjoy!
 
